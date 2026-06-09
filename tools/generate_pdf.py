@@ -11,7 +11,7 @@ from xhtml2pdf import pisa
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
-MD_FILE = ROOT / "ENTREGA_FIAP_GS.md"
+MD_FILE = ROOT / "docs" / "ENTREGA_FIAP_GS.md"
 OUT_FILE = ROOT / "ENTREGA_FIAP_GS.pdf"
 
 CSS_STYLE = """
@@ -165,7 +165,7 @@ def embed_images(text: str, base_dir: Path) -> str:
 
 def convert(md_path: Path, out_path: Path) -> None:
     text = md_path.read_text(encoding="utf-8")
-    text = embed_images(text, md_path.parent)
+    text = embed_images(text, ROOT)
 
     md = markdown.Markdown(
         extensions=["tables", "fenced_code", "toc"],
