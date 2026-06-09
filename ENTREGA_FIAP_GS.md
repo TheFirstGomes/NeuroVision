@@ -600,7 +600,7 @@ Grid search com 4 hiperparâmetros e 3 valores cada = 81 experimentos. O GA conv
 
 | Item | Link |
 |---|---|
-| Repositório GitHub | [INSERIR URL DO REPOSITÓRIO AQUI] |
+| Repositório GitHub | https://github.com/TheFirstGomes/NeuroVision |
 | Vídeo YouTube (não listado) | [INSERIR LINK DO VÍDEO AQUI] |
 | Demo local — Frontend | http://localhost:3000 |
 | Demo local — API Swagger | http://localhost:8000/docs |

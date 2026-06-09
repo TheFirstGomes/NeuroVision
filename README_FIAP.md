@@ -145,7 +145,7 @@ neurovision/
 
 ```bash
 # 1. Clone o repositório
-git clone <url-do-repositorio>
+git clone https://github.com/TheFirstGomes/NeuroVision.git
 cd neurovision
 
 # 2. Configure as variáveis de ambiente
