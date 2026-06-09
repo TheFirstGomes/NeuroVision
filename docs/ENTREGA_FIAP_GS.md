@@ -76,7 +76,7 @@ O raciocínio é bidirecional:
 > — Komorowski M et al., **npj Digital Medicine**, 2021.
 
 ---
-
+Interface NeuroVision - View 3D + Campo Visual
 ![Interface NeuroVision — Viewer 3D + Campo Visual](assets/screenshot_campo_visual_quiasma.png)
 
 ---
@@ -130,7 +130,7 @@ O NeuroVision foi construído integrando diretamente os conteúdos trabalhados a
 ```
 
 ---
-
+NeuroVision API — Swagger UI com todos os endpoints
 ![NeuroVision API — Swagger UI com todos os endpoints](assets/screenshot_swagger_ui.png)
 
 ---
@@ -372,13 +372,16 @@ Cada uma das 10 estruturas anatômicas tem mapeado o defeito perimétrico clíni
 | 8 | DMRI úmida — metamorfopsia e escotoma central | Mácula |
 
 ---
-
+Simulador de Campo Visual — Hemianopsia Bitemporal (Quiasma Óptico)
 ![Simulador de Campo Visual — Hemianopsia Bitemporal (Quiasma Óptico)](assets/screenshot_campo_visual_quiasma.png)
 
+Casos Clínicos — Adenoma Hipofisário com perguntas diagnósticas e ponto de ensino
 ![Casos Clínicos — Adenoma Hipofisário com perguntas diagnósticas e ponto de ensino](assets/screenshot_casos_clinicos.png)
 
+Classificador de Fundoscopia — análise em andamento
 ![Classificador de Fundoscopia — análise em andamento](assets/screenshot_classificador_analisando.png)
 
+Classificador de Fundoscopia — resultado com análise completa
 ![Classificador de Fundoscopia — resultado com análise completa](assets/screenshot_classificador_resultado_full.png)
 ---
 
@@ -492,10 +495,13 @@ As imagens a seguir foram selecionadas do conjunto de teste do REFUGE2 com base 
 
 **Classificador em ação — progressão de resultados:**
 
+Resultado completo com análise detalhada
 ![Resultado 86% — Fundo de Olho Normal](assets/screenshot_classificador_resultado_86.png)
 
+Resultado 72% — análise com suspeita
 ![Resultado 72% — análise com suspeita](assets/screenshot_classificador_resultado_72.png)
 
+Resultado 86% — Fundo de Olho Normal
 ![Resultado completo com análise detalhada](assets/screenshot_classificador_resultado_full.png)
 
 ### 3.3 Resposta da API — Exemplo Real
@@ -533,6 +539,7 @@ Ao enviar uma imagem de fundoscopia para o endpoint `/classify`, a resposta incl
 - **Para educação**: tutoria clínica interativa que reduz a curva de aprendizado em neuro-oftalmologia — especialidade com escassez global de profissionais
 - **Para a economia espacial**: demonstração prática de que tecnologias de visão computacional desenvolvidas para análise de imagens orbitais são diretamente transferíveis para diagnóstico médico
 
+Tutor Clínico RAG — resposta sobre SANS e sinais no disco óptico
 ![Tutor Clínico RAG — resposta sobre SANS e sinais no disco óptico](assets/screenshot_sans_chat.png)
 
 ## 4. Conclusões
