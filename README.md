@@ -123,10 +123,17 @@ neurovision/
 │   ├── glaucoma_alto/             # CDR 0.82–0.84 — risco alto
 │   ├── glaucoma_moderado/         # CDR 0.75–0.76 — risco moderado
 │   └── normal/                    # CDR 0.32–0.36 — sem suspeita
-├── document/                      # Documentação técnica e científica
-├── README.md                      # Documentação técnica completa do projeto
-├── README_FIAP.md                 # Este arquivo — entrega Global Solution
-└── start.bat                      # Inicialização no Windows
+├── docs/
+│   ├── ENTREGA_FIAP_GS.md         # Documento completo de entrega FIAP (Introdução → Conclusões)
+│   └── TECHNICAL.md               # Documentação técnica detalhada (endpoints, stack, env vars)
+├── tools/
+│   └── generate_pdf.py            # Gera ENTREGA_FIAP_GS.pdf a partir do .md
+├── assets/                        # Screenshots e gráficos gerados (usados na documentação)
+├── ENTREGA_FIAP_GS.pdf            # PDF de entrega FIAP — pronto para download
+├── README.md                      # Este arquivo — apresentação do projeto (formato FIAP)
+├── docker-compose.yml             # Orquestra backend + frontend em containers
+├── start.bat                      # Inicialização rápida no Windows
+└── start.sh                       # Inicialização rápida no Linux/macOS
 ```
 
 ---
