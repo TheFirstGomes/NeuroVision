@@ -1,7 +1,7 @@
 # FIAP - Faculdade de Informática e Administração Paulista
 
 <p align="center">
-<a href="https://www.fiap.com.br/"><img src="assets/logo-fiap.png" alt="FIAP - Faculdade de Informática e Administração Paulista" border="0" width=40% height=40%></a>
+<a href= "https://www.fiap.com.br/"><img src="assets/logo-fiap.png" alt="FIAP - Faculdade de Informática e Admnistração Paulista" border="0" width=40% height=40%></a>
 </p>
 
 <br>
@@ -21,24 +21,18 @@
 
 ---
 
-## 📜 Descrição
+## 👩🏻‍💻 Sobre este Projeto
 
-### O Problema Real: Astronautas Estão Perdendo a Visão no Espaço
-
-A exploração espacial de longa duração enfrenta uma ameaça silenciosa e crescente: a **Spaceflight-Associated Neuro-Ocular Syndrome (SANS)**, anteriormente conhecida como VIIP (*Visual Impairment and Intracranial Pressure Syndrome*). Estudos conduzidos pela NASA documentam que **aproximadamente 70% dos astronautas** em missões de longa duração na Estação Espacial Internacional (ISS) desenvolvem alterações estruturais no nervo óptico e na retina causadas pela redistribuição de fluidos cefalorraquidianos em microgravidade.
+A exploração espacial de longa duração enfrenta uma ameaça silenciosa e crescente: a **Spaceflight-Associated Neuro-Ocular Syndrome (SANS)**, documentada pela NASA como um dos cinco maiores riscos para missões de longa duração. Estudos publicados no *New England Journal of Medicine* demonstram que aproximadamente **70% dos astronautas** em missões na ISS desenvolvem alterações estruturais no nervo óptico e na retina causadas pela redistribuição de fluido cefalorraquidiano em microgravidade.
 
 As manifestações clínicas incluem **edema do disco óptico** (papiledema), **achatamento do globo ocular posterior**, **dobras coroideanas** e **hipermetropia progressiva** — todas visíveis e diagnosticáveis por exame de fundoscopia. Casos graves podem resultar em perda visual permanente, comprometendo missões tripuladas de longo prazo, incluindo futuras expedições à Lua e Marte.
 
 > *"Optic disc edema, globe flattening, choroidal folds, and hyperopic shifts observed in astronauts after long-duration space flight."*
 > — Mader TH et al., **New England Journal of Medicine**, 2011. DOI: 10.1056/NEJMoa1103053
 
-> *"Spaceflight-associated neuro-ocular syndrome (SANS): an update."*
-> — Lee AG et al., **npj Microgravity**, 2020. DOI: 10.1038/s41526-020-00097-9
+---
 
-> *"NASA's Human Research Program identifies SANS as one of the top five risks for long-duration spaceflight."*
-> — NASA Human Research Roadmap, 2023. (nasa.gov/hrp)
-
-### A Solução: NeuroVision
+## 🎯 Objetivo
 
 **NeuroVision** é uma plataforma educacional e de diagnóstico assistido por IA, desenvolvida para capacitar profissionais de saúde a identificar e interpretar alterações neuro-oftalmológicas — especialmente aquelas associadas à medicina espacial. A plataforma conecta três pilares:
 
@@ -46,18 +40,9 @@ As manifestações clínicas incluem **edema do disco óptico** (papiledema), **
 2. **IA generativa como tutor clínico** — chat RAG com base em literatura médica peer-reviewed (Walsh & Hoyt, Lancet Neurology, ONTT, EGS Guidelines)
 3. **Classificação automatizada de fundoscopia** — pipeline de 4 camadas: **YOLOv8n** (detecção de disco/cup óptico — dataset REFUGE2) → **EfficientNet-B4** (DR grading, APTOS 2019, AUC 0.9442) → **Claude Vision** → análise feature-based; calcula cup-to-disc ratio (CDR) para rastreamento de glaucoma
 
-### Conexão com a Economia Espacial
+---
 
-A mesma infraestrutura de visão computacional que processa imagens de satélites de observação terrestre é aplicada aqui ao diagnóstico de imagens retinianas. **EfficientNet-B4** — arquitetura originalmente desenvolvida para classificação eficiente de imagens em escala — é utilizada tanto em análise de imagens orbitais quanto, nesta plataforma, para grading de retinopatia com precisão clínica.
-
-O raciocínio é bidirecional:
-- **Espaço → Terra**: tecnologias de visão computacional e IA desenvolvidas para missões espaciais melhoram o diagnóstico médico na Terra
-- **Terra → Espaço**: plataformas de diagnóstico remoto como o NeuroVision são fundamentais para missões tripuladas onde médicos especialistas não estão disponíveis
-
-> *"Telemedicine and AI-assisted diagnostics will be essential for deep space missions where real-time communication with Earth physicians is impossible."*
-> — Komorowski M et al., **npj Digital Medicine**, 2021. DOI: 10.1038/s41746-021-00489-2
-
-### Tecnologias Aplicadas
+## 🧠 Tecnologias Aplicadas
 
 | Critério de Avaliação | Implementação no NeuroVision |
 |-----------------------|------------------------------|
@@ -72,19 +57,13 @@ O raciocínio é bidirecional:
 | Análise de Dados | Métricas QWK, AUC macro OvR, F1 macro, sensibilidade em graus graves |
 | Avaliação de Modelos | LLM-as-judge (faithfulness + relevancy), QWK ordinal para DR grading |
 
-### Impacto Gerado
-
-- **Para astronautas**: plataforma que treina equipes médicas em missões espaciais a identificar SANS precocemente via fundoscopia remota
-- **Para medicina terrestre**: rastreamento de retinopatia diabética (principal causa de cegueira prevenível) com IA acessível
-- **Para educação**: tutoria clínica interativa que reduz a curva de aprendizado em neuro-oftalmologia — especialidade escassa globalmente
-
 ---
 
 ## 📁 Estrutura de Pastas
 
-```
+```bash
 neurovision/
-├── assets/                        # Imagens e recursos visuais da documentação
+├── assets/                        # Screenshots e gráficos gerados (usados na documentação)
 ├── backend/                       # API FastAPI — servidor de IA e diagnóstico
 │   ├── app/
 │   │   ├── main.py                # Entrypoint FastAPI — 17 endpoints
@@ -128,7 +107,6 @@ neurovision/
 │   └── TECHNICAL.md               # Documentação técnica detalhada (endpoints, stack, env vars)
 ├── tools/
 │   └── generate_pdf.py            # Gera ENTREGA_FIAP_GS.pdf a partir do .md
-├── assets/                        # Screenshots e gráficos gerados (usados na documentação)
 ├── ENTREGA_FIAP_GS.pdf            # PDF de entrega FIAP — pronto para download
 ├── README.md                      # Este arquivo — apresentação do projeto (formato FIAP)
 ├── docker-compose.yml             # Orquestra backend + frontend em containers
@@ -144,7 +122,6 @@ neurovision/
 
 - Python 3.12+
 - Node.js 18+
-- GPU NVIDIA com CUDA (recomendado para treino; backend roda em CPU)
 - Chave de API **Groq** — gratuita em [console.groq.com](https://console.groq.com)
 - Chave de API **Anthropic** *(opcional)* — habilita Claude Vision
 
@@ -153,7 +130,7 @@ neurovision/
 ```bash
 # 1. Clone o repositório
 git clone https://github.com/TheFirstGomes/NeuroVision.git
-cd neurovision
+cd NeuroVision
 
 # 2. Configure as variáveis de ambiente
 # Crie backend/.env com o seguinte conteúdo:
@@ -189,33 +166,6 @@ npm run dev
 | API REST | http://localhost:8000 |
 | Documentação interativa (Swagger) | http://localhost:8000/docs |
 | Health check | http://localhost:8000/health |
-
-### Treinamento do modelo CNN (opcional)
-
-O modelo treinado já está incluído em `backend/models/`. Para re-treinar:
-
-```bash
-# Instalar dependências de treino
-pip install -r train/requirements-train.txt
-
-# Treino EfficientNet-B4 no APTOS 2019 (~40 min em GPU)
-python train/train_efficientnet.py \
-  --data-dir <caminho/aptos2019> \
-  --output-dir train/output \
-  --csv train_1.csv \
-  --image-subdir "train_images/train_images"
-
-# Otimização de hiperparâmetros com Algoritmo Genético
-python train/ga_hyperparam_search.py \
-  --data-dir <caminho/aptos2019> \
-  --output-dir train/output \
-  --pop-size 12 --generations 5
-
-# Export para ONNX
-python train/export_to_onnx.py \
-  --checkpoint train/output/efficientnet_b4_aptos.pt \
-  --output backend/models/fundoscopy_efficientnet_b4_v1.onnx
-```
 
 ---
 
@@ -269,7 +219,7 @@ python train/export_to_onnx.py \
 
 6. **Gulshan V et al.** (2016). *Development and Validation of a Deep Learning Algorithm for Detection of Diabetic Retinopathy in Retinal Fundus Photographs.* JAMA, 316(22), 2402–2410. DOI: 10.1001/jama.2016.17216
 
-7. **NASA Human Research Program** (2023). *Human Research Roadmap — SANS Evidence Report.* NASA Technical Reports Server. (https://humanresearchroadmap.nasa.gov)
+7. **NASA Human Research Program** (2023). *Human Research Roadmap — SANS Evidence Report.* NASA Technical Reports Server.
 
 8. **APTOS 2019 Blindness Detection** (2019). Kaggle Competition Dataset — Asia Pacific Tele-Ophthalmology Society.
 
@@ -281,4 +231,4 @@ python train/export_to_onnx.py \
 
 ## 📋 Licença
 
-<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/agodoi/template">MODELO GIT FIAP</a> por <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://fiap.com.br">Fiap</a> está licenciado sobre <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
+<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/SabrinaOtoni/TEMPLATE-FIAP-GRAD-ON-IA">MODELO GIT FIAP</a> por <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://fiap.com.br">FIAP</a> está licenciado sobre <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
