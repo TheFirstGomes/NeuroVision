@@ -1,0 +1,15 @@
+{
+  "model": "yolov8n",
+  "task": "optic_disc_cup_detection",
+  "dataset": "REFUGE2",
+  "classes": {
+    "0": "optic_disc",
+    "1": "optic_cup"
+  },
+  "imgsz": 640,
+  "map50": 0.9567,
+  "map50_95": 0.644,
+  "trained_at": "2026-06-09T03:36:35.181108+00:00",
+  "sha256": "82a79bb0bb35c1bb4442d31a384cdbd07424ceede3c059cd20f2cf992d293142",
+  "onnx_opset": 17
+}

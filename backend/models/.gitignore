@@ -1,0 +1,10 @@
+# Ignore model binaries — place them here manually after training
+*.onnx
+*.pt
+*.pth
+*.bin
+
+# Keep metadata and this file
+!model_metadata.json
+!.gitkeep
+!.gitignore

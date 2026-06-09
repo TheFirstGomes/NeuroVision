@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Env files
+.env
+backend/.env
+
+# Models (binários grandes — baixar/treinar localmente)
+backend/models/*.onnx
+backend/models/*.pt
+backend/models/*.pth
+backend/models/*.bin
+
+# Banco de dados SQLite gerado em runtime
+backend/neurovision.db
+backend/neurovision.db-shm
+backend/neurovision.db-wal
+
+# ChromaDB gerado em runtime
+backend/data/
+
+# Frontend
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# Datasets de treinamento (muito grandes)
+train/output/
+train/yolo_output/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
